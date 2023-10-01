@@ -18,7 +18,7 @@ public class CarAdapter implements Vehicle{
 
     @Override
     public double getFuelLevel(){
-        return car.getCarFuelCost();
+        return car.getCarFuelLevel();
     }
 
     @Override
