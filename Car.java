@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class Car {
     private static final double CAPACITY = 50.0; // 50L of fuel
     private static final double FUEL_EFFICIENCY = 8.9; // 8.9L/100km
@@ -37,7 +39,8 @@ public class Car {
     public void carTravel(double distance) {
         double maxDistance = fuel / (FUEL_EFFICIENCY / 100.0);
         if (maxDistance < distance) {
-            System.out.println("Not enough fuel to travel " + distance + "km. Travelling " + maxDistance + "km instead.");
+            DecimalFormat df = new DecimalFormat("#.##");
+            System.out.println("Not enough fuel to travel " + distance + "km. Travelling " + df.format(maxDistance) + "km instead.");
             totalDistance += maxDistance;
             fuel = 0.0;
         } else {
@@ -46,3 +49,5 @@ public class Car {
         }
     }
 }
+
+
