@@ -41,7 +41,7 @@ public class Airplane {
         double maxTime = fuel / FUEL_CONSUMPTION;
         if (maxTime < time) {
             double maxDistance = maxTime * SPEED;
-            DecimalFormat df = new DecimalFormat("#.##");
+            DecimalFormat df = new DecimalFormat("#.####");
             System.out.println("Not enough fuel to travel " + distance + "km. Travelling " + df.format(maxDistance) + "km instead.");
             totalDistance += maxDistance;
             fuel = 0.0;

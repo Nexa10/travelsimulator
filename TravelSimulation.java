@@ -8,7 +8,7 @@ class TravelSimulation {
         System.out.println("Travel Distance: " + df.format(vehicle.getDistance())+ "km");
         System.out.println("Travel Time: " + df.format(vehicle.getTime()) + " hours");
         System.out.println("Current Fuel Level: " + df2.format(vehicle.getFuelLevel()) + "L");
-        System.out.println("Fuel Cost: $" + vehicle.getFuelCost());
+        System.out.println("Fuel Cost: $" + df.format(vehicle.getFuelCost()));
         System.out.println();
     }
     public static void main(String[] args) {

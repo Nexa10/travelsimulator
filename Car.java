@@ -39,7 +39,7 @@ public class Car {
     public void carTravel(double distance) {
         double maxDistance = fuel / (FUEL_EFFICIENCY / 100.0);
         if (maxDistance < distance) {
-            DecimalFormat df = new DecimalFormat("#.##");
+            DecimalFormat df = new DecimalFormat("#.####");
             System.out.println("Not enough fuel to travel " + distance + "km. Travelling " + df.format(maxDistance) + "km instead.");
             totalDistance += maxDistance;
             fuel = 0.0;
