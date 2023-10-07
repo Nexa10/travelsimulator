@@ -1,3 +1,12 @@
+/*  
+ *  SED505 Design Patterns: Assignment 2 - Travel Simulation
+ *  
+ *  Boat.Java - stater code
+ * 
+ *  Date: Oct 1, 2023
+ *  
+ */
+
 import java.text.DecimalFormat;
 
 public class Boat {
@@ -41,8 +50,9 @@ public class Boat {
         double maxTime = fuel / FUEL_CONSUMPTION;
         if (maxTime < time) {
             double maxDistance = maxTime * SPEED;
-            DecimalFormat df = new DecimalFormat("#.##");
-            System.out.println("Not enough fuel to travel " + distance + "km. Travelling " + df.format(maxDistance) + "km instead.");
+            DecimalFormat df = new DecimalFormat("#.###");
+            System.out.println("Not enough fuel to travel " + distance + "km. Travelling " + df.format(maxDistance)
+                    + "km instead.");
             totalDistance += maxDistance;
             fuel = 0.0;
         } else {
@@ -51,4 +61,3 @@ public class Boat {
         }
     }
 }
-

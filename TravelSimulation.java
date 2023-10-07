@@ -1,17 +1,15 @@
-import java.text.DecimalFormat;
+/*  
+ *  SED505 Design Patterns: Assignment 2 - Travel Simulation
+ *  
+ *  TravelSimulation.java  - contemporary travel simulation for a boat, car and airplane.
+ * 
+ *  Modified by: Dennis Audu, Yiyuan Dong, Kannav Seith
+ *  
+ *  Date: Oct 1, 2023
+ * 
+ */
 
-class VehicleUtility {
-    public void printVehicleInformation(Vehicle vehicle, String vehicleType) {
-        DecimalFormat df = new DecimalFormat("#.###");
-        DecimalFormat df2 = new DecimalFormat("#.#");
-        System.out.println("Vehicle Type: " + vehicleType);
-        System.out.println("Travel Distance: " + df.format(vehicle.getDistance())+ "km");
-        System.out.println("Travel Time: " + df.format(vehicle.getTime()) + " hours");
-        System.out.println("Current Fuel Level: " + df2.format(vehicle.getFuelLevel()) + "L");
-        System.out.println("Fuel Cost: $" +  df2.format(vehicle.getFuelCost()));
-        System.out.println();
-    }
-}
+import java.text.DecimalFormat;
 
 class TravelSimulation {
     public static void main(String[] args) {
@@ -55,5 +53,19 @@ class TravelSimulation {
         vehicleUtility.printVehicleInformation(airplane, "Airplane");
 
         new java.util.Scanner(System.in).nextLine();
+    }
+}
+
+
+class VehicleUtility {
+    public void printVehicleInformation(Vehicle vehicle, String vehicleType) {
+        DecimalFormat df = new DecimalFormat("#.###");
+        DecimalFormat df2 = new DecimalFormat("#.#");
+        System.out.println("Vehicle Type: " + vehicleType);
+        System.out.println("Travel Distance: " + df.format(vehicle.getDistance())+ "km");
+        System.out.println("Travel Time: " + df.format(vehicle.getTime()) + " hours");
+        System.out.println("Current Fuel Level: " + df2.format(vehicle.getFuelLevel()) + "L");
+        System.out.println("Fuel Cost: $" +  df2.format(vehicle.getFuelCost()));
+        System.out.println();
     }
 }

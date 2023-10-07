@@ -1,4 +1,16 @@
+/*  
+ *  SED505 Design Patterns: Assignment 2 - Travel Simulation
+ *  
+ *  CarAdapter.Java - adapter class for legacy Car class
+ * 
+ *  Authors: Dennis Audu, Yiyuan Dong, Kannav Seith
+ * 
+ *  Created: Oct 1, 2023
+ *  
+ */
+
 public class CarAdapter implements Vehicle{
+
     private Car car = new Car();
 
     @Override
@@ -18,7 +30,7 @@ public class CarAdapter implements Vehicle{
 
     @Override
     public double getFuelLevel(){
-        return car.getCarFuelCost();
+        return car.getCarFuelLevel();
     }
 
     @Override
